@@ -1,0 +1,18 @@
+<ul class="space-y-4">
+  <li *ngFor="let item of items; let i = index" class="p-4 bg-white rounded-lg shadow-sm border border-gray-200 flex flex-col md:flex-row justify-between items-start md:items-center">
+    <div class="flex-1">
+      <p><strong>Name:</strong> {{ item.name }}</p>
+      <p><strong>Surname:</strong> {{ item.surname }}</p>
+      <p><strong>ID:</strong> {{ item.id }}</p>
+      <p><strong>Contact Number:</strong> {{ item.contactNumber }}</p>
+    </div>
+    <div class="flex space-x-4 mt-4 md:mt-0">
+      <input type="checkbox" (change)="togglePresent(i)" class="h-5 w-5 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500">
+      <button (click)="removeItem(i)" class="inline-flex items-center px-3 py-1 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+        Remove
+      </button>
+    </div>
+  </li>
+</ul>
+
+  
